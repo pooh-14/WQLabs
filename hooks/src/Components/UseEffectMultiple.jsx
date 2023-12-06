@@ -22,7 +22,7 @@ const UseEffectMultiple = () => {
       <h3>{counter2}</h3>
       <button onClick={()=>setCounter2((prevValue)=>prevValue+1)}>+1</button><br/>
       
-      <button onClick={()=>router("/")}>Home</button>
+      <button className="button" onClick={()=>router("/")}>Home</button>
     </div>
   )
 }

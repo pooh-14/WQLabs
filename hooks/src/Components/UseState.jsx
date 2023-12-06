@@ -11,10 +11,10 @@ const UseState = () => {
       <h3>My Favorite Color Is {color}!</h3>
       <button onClick={()=>setColor("Blue")} >Blue</button>
       <button onClick={()=>setColor("Green")} >Green</button><br/>
-      <button onClick={()=>router("/")}>Home</button>
+      <button className="button" onClick={()=>router("/")}>Home</button>
     </div>
   )
-}
+}   
 
 export default UseState
 

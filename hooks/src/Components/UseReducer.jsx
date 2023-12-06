@@ -46,7 +46,7 @@ const UseReducer = () => {
     <button onClick={() => dispatch({ type: "stop" })}>Stop</button>
     <button onClick={() => dispatch({ type: "reset" })}>Reset</button><br/>
     
-    <button onClick={()=>router("/")}>Home</button>
+    <button className="button" onClick={()=>router("/")}>Home</button>
   </div>
   )
 };

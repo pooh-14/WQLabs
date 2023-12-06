@@ -15,7 +15,7 @@ const UseEffect = () => {
       <h3>No Dependency</h3>
       <h3>{counter}</h3>
       <button onClick={()=>setCounter((prevValue)=>prevValue+1)}>+1</button><br/>
-      <button onClick={()=>router("/effectempty")}>Next</button>
+      <button className="button" onClick={()=>router("/effectempty")}>Next</button>
     </div>
   );
 };

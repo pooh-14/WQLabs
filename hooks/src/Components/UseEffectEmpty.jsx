@@ -16,7 +16,7 @@ const UseEffectEmpty = () => {
       <h3>Empty Dependency</h3>
       <h3>{counter}</h3>
       <button onClick={()=>setCounter((prevValue)=>prevValue+1)}>+1</button><br/>
-      <button onClick={()=>router("/effectsingle")}>Next</button>
+      <button className="button" onClick={()=>router("/effectsingle")}>Next</button>
     </div>
     </div>
   )

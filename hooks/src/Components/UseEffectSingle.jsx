@@ -18,7 +18,7 @@ const UseEffectSingle = () => {
       <button onClick={()=>setCounter((prevValue)=>prevValue+1)}>+1</button>
       <h3>{counter1}</h3>
       <button onClick={()=>setCounter1((prevValue)=>prevValue+1)}>+1</button><br/>
-      <button onClick={()=>router("/effectmultiple")}>Next</button>
+      <button className="button" onClick={()=>router("/effectmultiple")}>Next</button>
     </div>
   )
 }
