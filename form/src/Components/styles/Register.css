@@ -1,0 +1,226 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Poppins", sans-serif;
+}
+
+#screen {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFar8uC5RACbx8NdayhlEGg-B8rPiDORegbDupvpLlqoFxA4IfICBCfShnypHdi4eQGG0&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 630px;
+  width: 100%;
+  border: 1px solid black;
+}
+
+#box {
+  width: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.443);
+  margin-top: 30px;
+  margin-left: 26%;
+  text-align: center;
+  box-shadow: 0 0 0.75rem 0 #ccc;
+  margin-bottom: 50px;
+  color: white;
+}
+
+#box > h2 {
+  margin: 15px;
+}
+
+#formone {
+  width: 85%;
+  /* border: 1px solid blue; */
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.146);
+  backdrop-filter: blur;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+#formone > form > div {
+  display: flex;
+  justify-content: space-around;
+  line-height: 25px;
+  margin-top: 10px;
+}
+
+#formone > form > div > label {
+  /* border: 1px solid red; */
+  width: 30%;
+  text-align: right;
+  height: 35px;
+  padding-top: 10px;
+}
+#formone > form > div > input {
+  /* border: 1px solid red; */
+  width: 60%;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.406);
+  color: white;
+  outline: none;
+}
+
+#formone > form > div > input::placeholder {
+  color: rgba(255, 255, 255, 0.582);
+  padding-left: 10px;
+}
+
+#formone > form > div > select {
+  /* border: 1px solid red; */
+  width: 61%;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.406);
+  color: white;
+  outline: none;
+}
+
+#formone > form > div > select > option {
+  background-color: black;
+  color: white;
+}
+
+#formone > form > button {
+  width: 80%;
+  height: 35px;
+  margin-top: 15px;
+  border-radius: 25px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(161, 154, 244),
+    rgb(245, 153, 210)
+  );
+  border: rgb(129, 152, 228);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+#formone > form > button:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(245, 153, 210),
+    rgb(161, 154, 244)
+  );
+}
+
+#formone > form > p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.614);
+}
+
+#formone > form > p > b {
+  color: white;
+}
+
+#formone > form > div:nth-child(5) > div > input::placeholder {
+  color: rgba(255, 255, 255, 0.582);
+  padding-left: 10px;
+}
+
+#formone > form > div:nth-child(5) > div > select > option {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 375px) {
+  #screen {
+    height: 700px;
+    border: 1px solid black;
+  }
+
+  #box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #box > h2 {
+    margin: 10px;
+    font-size: 21px;
+  }
+
+  #formone > form {
+    padding: 5px;
+  }
+
+  #formone > form > div {
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+  }
+
+  #formone > form > div > label {
+    text-align: left;
+    height: 15px;
+    width: 100%;
+  }
+
+  #formone > form > div > input {
+    width: 99%;
+  }
+
+  #formone > form > div > select {
+    width: 99%;
+  }
+
+  #formone > form > div:nth-child(5) {
+    flex-direction: column;
+  }
+
+  #formone > form > div:nth-child(5) > div:nth-child(2) {
+    display: flex;
+    /* border: 1px solid blue; */
+    width: 100%;
+  }
+
+
+  #formone > form > div:nth-child(5) > div {
+    width: 100%;
+    height: 40px;
+  }
+
+  #formone > form > div:nth-child(5) > div > input {
+    width: 80%;
+    
+  }
+
+  #formone > form > div:nth-child(5) > div > select > option {
+    width: 100%;
+  }
+
+  #formone > form > div > select > option {
+    width: 100px;
+    height: 20px;
+  }
+}
+
+#formone > form > div:nth-child(5) > div {
+  width: 60%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+#formone > form > div:nth-child(5) > div > select {
+  width: 54px;
+  margin-right: 6px;
+  height: 39px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.406);
+  color: white;
+  outline: none;
+}
+
+#formone > form > div:nth-child(5) > div > input {
+  width: 80%;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.406);
+  color: white;
+  outline: none;
+}
