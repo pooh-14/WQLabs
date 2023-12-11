@@ -6,6 +6,10 @@ const Login = () => {
     const router =useNavigate();
   return (
     <div id="screen">
+      <div id='left'>
+        
+      <img src="https://static.vecteezy.com/system/resources/previews/024/100/322/non_2x/account-login-and-password-data-protection-cyber-security-online-registration-confidentiality-concept-modern-flat-cartoon-style-illustration-on-white-background-vector.jpg"/>
+      </div>
     <div id="box">
       <h2>Login</h2>
       <div id="formone">

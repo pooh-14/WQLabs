@@ -5,23 +5,38 @@
 }
 
 #screen {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFar8uC5RACbx8NdayhlEGg-B8rPiDORegbDupvpLlqoFxA4IfICBCfShnypHdi4eQGG0&usqp=CAU);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 630px;
+  /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFar8uC5RACbx8NdayhlEGg-B8rPiDORegbDupvpLlqoFxA4IfICBCfShnypHdi4eQGG0&usqp=CAU); */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  /* height: auto; */
+  width: 90%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+#left{
+  width: 48%;
+  /* border: 2px solid red; */
+}
+
+#left>img{
   width: 100%;
-  border: 1px solid black;
+ margin-top: 100px;
+ /* border: 2px solid red; */
+ /* margin-left: 40px; */
 }
 
 #box {
-  width: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.443);
+  width: 52%;
+  /* border: 1px solid rgba(255, 255, 255, 0.443); */
   margin-top: 30px;
-  margin-left: 26%;
-  text-align: center;
-  box-shadow: 0 0 0.75rem 0 #ccc;
+  /* margin-left: 26%; */
+  /* text-align: center; */
+  /* box-shadow: 0 0 0.75rem 0 #ccc; */
   margin-bottom: 50px;
-  color: white;
+  /* border: 2px solid blue; */
 }
 
 #box > h2 {
@@ -29,11 +44,11 @@
 }
 
 #formone {
-  width: 85%;
+  width: 95%;
   /* border: 1px solid blue; */
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.146);
-  backdrop-filter: blur;
+  /* background-color: rgba(255, 255, 255, 0.146); */
+  /* backdrop-filter: blur; */
   padding: 5px;
   margin-bottom: 20px;
 }
@@ -56,14 +71,14 @@
   /* border: 1px solid red; */
   width: 60%;
   height: 35px;
-  background-color: transparent;
+  /* background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.406);
-  color: white;
+  color: white; */
   outline: none;
 }
 
 #formone > form > div > input::placeholder {
-  color: rgba(255, 255, 255, 0.582);
+  /* color: rgba(255, 255, 255, 0.582); */
   padding-left: 10px;
 }
 
@@ -71,9 +86,9 @@
   /* border: 1px solid red; */
   width: 61%;
   height: 35px;
-  background-color: transparent;
+  /* background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.406);
-  color: white;
+  color: white; */
   outline: none;
 }
 
@@ -83,8 +98,8 @@
 }
 
 #formone > form > button {
-  width: 80%;
-  height: 35px;
+  width: 60%;
+  height: 40px;
   margin-top: 15px;
   border-radius: 25px;
   background-image: linear-gradient(
@@ -110,12 +125,12 @@
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.614);
+  /* color: rgba(255, 255, 255, 0.614); */
 }
 
-#formone > form > p > b {
+/* #formone > form > p > b {
   color: white;
-}
+} */
 
 #formone > form > div:nth-child(5) > div > input::placeholder {
   color: rgba(255, 255, 255, 0.582);
@@ -130,13 +145,24 @@
 @media screen and (max-width: 375px) {
   #screen {
     height: 700px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    
   }
+
+  #left{
+      width: 100%;
+      height: 20px;
+      /* border: 1px solid red; */
+  }
+
+  
 
   #box {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: white;
   }
 
   #box > h2 {
@@ -210,17 +236,17 @@
   width: 54px;
   margin-right: 6px;
   height: 39px;
-  background-color: transparent;
+  /* background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.406);
-  color: white;
+  color: white; */
   outline: none;
 }
 
 #formone > form > div:nth-child(5) > div > input {
   width: 80%;
   height: 35px;
-  background-color: transparent;
+  /* background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.406);
-  color: white;
+  color: white; */
   outline: none;
 }

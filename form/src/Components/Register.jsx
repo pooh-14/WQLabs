@@ -7,6 +7,9 @@ const Register = () => {
   const router =useNavigate();
   return (
     <div id="screen">
+      <div id="left">
+        <img src="https://static.vecteezy.com/system/resources/previews/024/100/488/non_2x/account-login-and-password-on-smartphone-and-laptop-screen-data-protection-cyber-security-online-registration-confidentiality-concept-modern-flat-cartoon-style-illustration-vector.jpg"/>
+      </div>
       <div id="box">
         <h2>Register</h2>
         <div id="formone">
