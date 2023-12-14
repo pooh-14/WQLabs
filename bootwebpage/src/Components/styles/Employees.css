@@ -288,7 +288,7 @@
 
 /* --------------------------**Responsive**---------------------- */
 
-@media (min-width: 360px) and (max-width: 992px) {
+@media (min-width: 360px) and (max-width: 768px) {
   #screen {
     height: 100%;
   }
