@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import exportIcon from "../Images/export-icon.png";
 import importIcon from "../Images/import-icon.png";
 import editEmployeeIcon from "../Images/edit-employee-icon.png";
 import "./styles/Employees.css";
 import Dashboard from "./Dashboard";
 import Navbar from "./Navbar";
+import { AuthContext } from "./Context/AuthContext";
 
 const Employees = () => {
-  const [menu, setMenu] = useState(true);
+
+  const { menu,setMenu } = useContext(AuthContext);
 
   return (
     <div id="screen2">
@@ -25,7 +27,8 @@ const Employees = () => {
 
             <img class="bg-success border border-success" src={exportIcon} />
             <img class="border border-secondary" src={importIcon} />
-            <button class="btn btn-outline-secondary me-3">Add Employee</button>
+            <button class="btn btn-outline-secondary me-3 button-moblie">Add Employee</button>
+            <button class="btn btn-outline-secondary me-3 button-moblie-view">+</button>
           </div>
           <div id="righttwo1" class="table-responsive-md">
             <table class="table table-hover ">
@@ -204,7 +207,7 @@ const Employees = () => {
                 </tr>
 
                 <tr>
-                  <td>11</td>
+                  <td className="br">11</td>
                   <td>#ZC2975</td>
                   <td>Dee Zynah</td>
                   <td>Rodha Report</td>
@@ -214,7 +217,7 @@ const Employees = () => {
                   <td>
                     <button class="butt work  ">Working</button>
                   </td>
-                  <td>
+                  <td className="bl">
                     <img src={editEmployeeIcon} />
                   </td>
                 </tr>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import dashboardIcon from "../Images/dashboard-icon.png";
 import peopleIcon from "../Images/people-icon.png";
 import attendanceIcon from "../Images/attendance-icon.png";
@@ -10,15 +10,20 @@ import settingsIcon from "../Images/settings-icon.png";
 import helpCenterIcon from "../Images/help-center-icon.png";
 import logoutIcon from "../Images/logout-icon.png";
 import logo from "../Images/white-logo.png";
+import cropLogo from "../Images/white-symbol.png";
 import "./styles/Employees.css";
+import { AuthContext } from "./Context/AuthContext";
 
-const Dashboard = ({ menu, setMenu }) => {
+const Dashboard = () => {
+  const { toggle, menu } = useContext(AuthContext);
+
   return (
     <div>
       {menu ? (
         <div id="left">
           <div>
             <img src={logo} />
+            <i onClick={toggle} class="bi bi-x close"></i>
           </div>
           <div className="mt2">
             <img src={dashboardIcon} />
@@ -64,7 +69,7 @@ const Dashboard = ({ menu, setMenu }) => {
       ) : (
         <div id="left1">
           <div>
-            <img src={logo} />
+            <img src={cropLogo} />
           </div>
           <div className="mt2">
             <img src={dashboardIcon} />
@@ -87,7 +92,7 @@ const Dashboard = ({ menu, setMenu }) => {
           <div>
             <img src={assetsIcon} />
           </div>
-          <div>
+          <div className="mt">
             <img src={settingsIcon} />
           </div>
           <div>
