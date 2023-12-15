@@ -8,14 +8,13 @@ import Navbar from "./Navbar";
 import { AuthContext } from "./Context/AuthContext";
 
 const Employees = () => {
-
-  const { menu,setMenu } = useContext(AuthContext);
+  const { menu, setMenu } = useContext(AuthContext);
 
   return (
     <div id="screen2">
       <Dashboard menu={menu} setMenu={setMenu} />
       <div id="right">
-        <Navbar menu={menu} setMenu={setMenu}  />
+        <Navbar menu={menu} setMenu={setMenu} />
         <div id="righttwo">
           <div class="container containerr d-flex">
             <p class="me-auto p-2 ps-3">Employees</p>
@@ -27,8 +26,12 @@ const Employees = () => {
 
             <img class="bg-success border border-success" src={exportIcon} />
             <img class="border border-secondary" src={importIcon} />
-            <button class="btn btn-outline-secondary me-3 button-moblie">Add Employee</button>
-            <button class="btn btn-outline-secondary me-3 button-moblie-view">+</button>
+            <button class="btn btn-outline-secondary me-3 button-moblie">
+              Add Employee
+            </button>
+            <button class="btn btn-outline-secondary me-3 button-moblie-view">
+              +
+            </button>
           </div>
           <div id="righttwo1" class="table-responsive-md">
             <table class="table table-hover ">
@@ -218,6 +221,22 @@ const Employees = () => {
                     <button class="butt work  ">Working</button>
                   </td>
                   <td className="bl">
+                    <img src={editEmployeeIcon} />
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>12</td>
+                  <td>#ZC2975</td>
+                  <td>Issabelle Ringing</td>
+                  <td>Rodha Report</td>
+                  <td>Technology</td>
+                  <td>SDE</td>
+                  <td>Intern</td>
+                  <td>
+                    <button class="butt ab ">Absent</button>
+                  </td>
+                  <td>
                     <img src={editEmployeeIcon} />
                   </td>
                 </tr>

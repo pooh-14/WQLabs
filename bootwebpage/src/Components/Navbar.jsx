@@ -5,7 +5,7 @@ const Navbar = () => {
   const { toggle } = useContext(AuthContext);
 
   return (
-    <div id="right">
+    <div id="navbar-right">
       <nav class="navbar navbar-expand ">
         <div class="container-fluid-lg border-bottom  ">
           {/* <span class="navbar-toggler-icon"></span> */}

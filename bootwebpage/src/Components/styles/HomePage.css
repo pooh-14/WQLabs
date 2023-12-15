@@ -1,8 +1,127 @@
 *{
     margin: 0;
-    padding: 0%;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.row{
+    margin: 0;
+}
+.col-4{
+    padding: 0;
 }
 
 .borders{
+    border: 1px solid red;
+}
+
+#main{
+    width: 100%;
+    /* border: 1px solid red; */
+    background-color: #e8e8e8;
+}
+
+.mainone{
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+#grid{
+    width: 93%;
+    margin: auto;
+    background-color: white;
+    font-size: 10px;
+    margin-top: 30px;
+}
+
+.lambu{
+    border:1px solid black;
+    background-color: yellow;
+    /* width: 32%; */
+    height: 350px;
+}
+.lambu2{
+    border:1px solid black;
+    background-color: yellow;
+    width: 27%;
+}
+
+.chintu{
+    border: 1px solid black;
+    background-color: white;
+    width:46%;
+    height: 85px;
+    justify-content: space-between;
+}
+
+.chintu>div:nth-child(2){
+    width: 38px;
+    height: 38px;
+    border: 1px solid red;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.chintu>div:nth-child(2)>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#upevents{
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px 2px;    
+    margin-top :25px;
+}
+
+#upevents>div{
+    justify-content: space-between;
+}
+
+#upevents>div>div:nth-child(1){
+    width: 25%;
+    /* border: 1px solid green; */
+    justify-content: space-between;
+}
+
+#upevents>div>div:nth-child(2){
+    width: 70%;
+    /* border: 1px solid green;  */
+    text-align: start;
+}
+
+#outoffice{
+    border: 1px solid black;
+    background-color: white; 
+    padding: 10px 0;
+    line-height: 20px;   
+    margin-top :25px;
+}
+
+#outoffice>div>div{
+    justify-content: space-between;;
+}
+
+#outoffice>div>div:nth-child(2)>div:nth-child(1){
+    /* border: 1px solid red; */
+    width: 45px;
+    text-align: center;
+    
+}
+
+#outoffice>div>div:nth-child(2)>div:nth-child(2){
+    /* border: 1px solid red; */
+    width: 260px;
+}
+
+#outoffice>div>div:nth-child(2)>div>img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    margin-top: 2px;
+}
+
+.maintwo{
     border: 1px solid red;
 }
