@@ -15,7 +15,7 @@ const Employees = () => {
       <Dashboard menu={menu} setMenu={setMenu} />
       <div id="right">
         <Navbar menu={menu} setMenu={setMenu} />
-        <div id="righttwo">
+        <div id="righttwo">  
           <div class="container containerr d-flex">
             <p class="me-auto p-2 ps-3">Employees</p>
 
@@ -259,6 +259,7 @@ const Employees = () => {
             </div>
           </div>
         </div>
+      
       </div>
     </div>
   );

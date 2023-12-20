@@ -1,127 +1,509 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-.row{
-    margin: 0;
-}
-.col-4{
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.borders{
-    border: 1px solid red;
+.row {
+  margin: 0;
 }
 
-#main{
+#main {
+  width: 100%;
+  /* height: 100vh; */
+  /* border: 1px solid red; */
+  background-color: #f5f5f5;
+}
+
+#grid {
+  width: 95%;
+  margin: auto;
+  background-color: #f5f5f5;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/* .mainone{
+    border: 1px solid black;
+} */
+
+.colum1 {
+  padding: 0%;
+  /* border: 1px solid red; */
+}
+
+.chintu {
+  /* border: 1px solid black;  */
+  margin: 10px;
+  background-color: white;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 20px 10px 20px;
+  border-radius: 3px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.025), -2px 0 10px rgba(0, 0, 0, 0.025);
+}
+
+.chintu > div:nth-child(1) {
+  line-height: 0px;
+}
+
+.chintu > div:nth-child(1) > p {
+  font-size: 10px;
+  color: rgb(151, 151, 151);
+  font-weight: 400;
+}
+
+.chintu > div:nth-child(1) > h4 {
+  font-weight: 600;
+}
+
+.chintu > div:nth-child(2) {
+  width: 38px;
+  height: 38px;
+  /* border: 1px solid red; */
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.chintu > div:nth-child(2) > img {
+  width: 100%;
+  height: 100%;
+}
+
+.or {
+  border: 1px solid #fff1da;
+  background-color: #fff1da;
+}
+
+.pink {
+  border: 1px solid #fdeae4;
+  background-color: #fdeae4;
+}
+
+.pur {
+  border: 1px solid #f7e4fe;
+  background-color: #f7e4fe;
+}
+
+.blue {
+  border: 1px solid #e4e4fe;
+  background-color: #e4e4fe;
+}
+
+#upevents {
+  /* border: 1px solid black; */
+  margin: 10px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.025), -2px 0 10px rgba(0, 0, 0, 0.025);
+}
+
+#upevents > div {
+  justify-content: space-between;
+}
+
+#upevents > div > div:nth-child(1) {
+  width: 25%;
+  /* border: 1px solid green; */
+  justify-content: space-between;
+}
+
+#upevents > div > div:nth-child(2) {
+  width: 70%;
+  /* border: 1px solid green;  */
+  text-align: start;
+}
+
+#upevents > div > div:nth-child(1) {
+  /* border: 1px solid red; */
+  font-weight: 500;
+}
+
+#outoffice {
+  /* border: 1px solid black; */
+  margin: 10px;
+  background-color: white;
+  padding: 15px;
+  line-height: 20px;
+  border-radius: 3px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.025), -2px 0 10px rgba(0, 0, 0, 0.025);
+}
+
+#outoffice > div > div {
+  justify-content: space-between;
+}
+
+#outoffice > div > div:nth-child(1) {
+  color: rgb(139, 139, 139);
+  font-size: 9px;
+  margin-top: 3px;
+}
+
+#outoffice > div > div:nth-child(2) > div:nth-child(1) {
+  /* border: 1px solid red; */
+  width: 15%;
+  text-align: center;
+}
+
+#outoffice > div > div:nth-child(2) > div:nth-child(2) {
+  /* border: 1px solid red; */
+  width: 80%;
+}
+
+#outoffice > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) {
+  font-weight: 600;
+}
+
+#outoffice > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) {
+  color: rgb(139, 139, 139);
+  font-size: 9px;
+  margin-top: -5px;
+  /* border: 1px solid red; */
+}
+
+#outoffice > div > div:nth-child(2) > div > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  margin-top: 2px;
+}
+
+.calender {
+  /* border:1px solid black; */
+  margin: 10px;
+  background-color: white;
+  /* width: 27%; */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.025), -2px 0 10px rgba(0, 0, 0, 0.025);
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.calender > div > div:nth-child(1) {
+  width: 70%;
+  /* border: 1px solid red; */
+  /* padding: 0%; */
+  margin: auto;
+  justify-content: space-between;
+}
+
+.calender table {
+  width: 95%;
+  height: 150px;
+  /* border: 1px solid red; */
+  margin: auto;
+}
+.calender > div > table > thead {
+  /* border: 1px solid blue; */
+  text-align: center;
+  color: #b3b2b2;
+}
+
+.calender tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* border: 1px solid red; */
+}
+
+.calender tr td {
+  /* border: 1px solid blue; */
+  height: 28px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  border: 1px solid #518a60;
+  background-color: #518a60;
+  color: white;
+  width: 28px;
+  margin-left: 3px;
+  border-radius: 50px;
+}
+
+.calender > div:nth-child(2) > div {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  margin: auto;
+}
+
+.cal {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #fff1da;
+  background-color: #fff1da;
+  padding: 3px;
+  border-radius: 2px;
+}
+
+.maintwo {
+  /* border: 1px solid blue;   */
+  padding: 0 12px;
+}
+
+.announce {
+  margin-top: 12px;
+  background-color: white;
+  /* border: 1px solid blue; */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.025), -2px 0 10px rgba(0, 0, 0, 0.025);
+  padding: 15px 15px 0px 15px;
+  margin-right: 20px;
+}
+
+.announce > div {
+  justify-content: space-between;
+}
+
+.announce > div > div:nth-child(1) {
+  /* border: 1px solid blue; */
+  width: 10%;
+  justify-content: space-between;
+}
+.announce > div > div:nth-child(2) {
+  width: 87%;
+  /* border: 1px solid green;  */
+  text-align: start;
+  line-height: 18px;
+}
+
+#task {
+  margin-top: 10px;
+  /* margin-right: 10px; */
+  background-color: white;
+  /* border: 1px solid blue; */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.025), -2px 0 10px rgba(0, 0, 0, 0.025);
+  padding: 20px 10px 10px 10px;
+}
+
+#task > div {
+  justify-content: space-between;
+}
+
+#task > div > i {
+  /* border: 1px solid blue; */
+  width: 10%;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#task > div > span:nth-child(2) {
+  width: 87%;
+  /* border: 1px solid green;  */
+  text-align: start;
+  line-height: 15px;
+}
+
+@media (max-width: 991px) {
+  #grid {
     width: 100%;
-    /* border: 1px solid red; */
-    background-color: #e8e8e8;
-}
+  }
 
-.mainone{
-    /* border: 1px solid red; */
-    justify-content: space-between;
-}
-
-#grid{
-    width: 93%;
-    margin: auto;
-    background-color: white;
-    font-size: 10px;
-    margin-top: 30px;
-}
-
-.lambu{
-    border:1px solid black;
-    background-color: yellow;
-    /* width: 32%; */
-    height: 350px;
-}
-.lambu2{
-    border:1px solid black;
-    background-color: yellow;
-    width: 27%;
-}
-
-.chintu{
-    border: 1px solid black;
-    background-color: white;
-    width:46%;
-    height: 85px;
-    justify-content: space-between;
-}
-
-.chintu>div:nth-child(2){
-    width: 38px;
-    height: 38px;
-    border: 1px solid red;
-    padding: 5px;
-    border-radius: 50px;
-}
-
-.chintu>div:nth-child(2)>img{
+  .colum1 {
     width: 100%;
-    height: 100%;
-}
+  }
 
+  .chintu > div:nth-child(1) > p {
+    font-size: 13px;
+  }
 
+  #upevents {
+    font-size: 16px;
+  }
 
-#upevents{
-    border: 1px solid black;
-    background-color: white;
-    padding: 10px 2px;    
-    margin-top :25px;
-}
-
-#upevents>div{
-    justify-content: space-between;
-}
-
-#upevents>div>div:nth-child(1){
-    width: 25%;
-    /* border: 1px solid green; */
-    justify-content: space-between;
-}
-
-#upevents>div>div:nth-child(2){
-    width: 70%;
-    /* border: 1px solid green;  */
-    text-align: start;
-}
-
-#outoffice{
-    border: 1px solid black;
-    background-color: white; 
-    padding: 10px 0;
-    line-height: 20px;   
-    margin-top :25px;
-}
-
-#outoffice>div>div{
-    justify-content: space-between;;
-}
-
-#outoffice>div>div:nth-child(2)>div:nth-child(1){
+  #upevents > div > div:nth-child(1) {
     /* border: 1px solid red; */
+    width: 30%;
+  }
+
+  #upevents > div > div:nth-child(2) {
+    width: 60%;
+  }
+
+  #outoffice > div:nth-child(1) > p > b {
+    font-size: 16px;
+  }
+
+  #outoffice > div > div:nth-child(1) {
+    /* border: 1px solid red; */
+    font-size: 14px;
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  #outoffice > div > div:nth-child(2) > div:nth-child(1) {
+    width: 22%;
+    /* border: 1px solid red; */
+  }
+
+  #outoffice > div > div:nth-child(2) > div:nth-child(2) {
+    width: 78%;
+    /* border: 1px solid red; */
+    padding-top: 10px;
+    font-size: 16px;
+  }
+
+  #outoffice > div > div:nth-child(2) > div > img {
     width: 45px;
-    text-align: center;
-    
-}
+    height: 55px;
+  }
 
-#outoffice>div>div:nth-child(2)>div:nth-child(2){
+  #outoffice > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+
+  .calender {
     /* border: 1px solid red; */
-    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 16px;
+    padding: 10 20px;
+  }
+
+  .calender > div:nth-child(1) {
+    /* border: 1px solid blue; */
+    width: 48%;
+  }
+
+  .calender > div:nth-child(2) {
+    /* border: 1px solid green; */
+    width: 48%;
+  }
+
+  .announce {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .announce > div > div:nth-child(1) {
+    width: 18%;
+  }
+
+  .announce > div > div:nth-child(2) {
+    width: 78%;
+  }
+
+  #task {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  #task > div > i {
+    /* border: 1px solid blue; */
+    width: 5%;
+  }
+
+  #task > div > span:nth-child(2) {
+    width: 94%;
+    /* border: 1px solid green;  */
+  }
 }
 
-#outoffice>div>div:nth-child(2)>div>img{
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
-    margin-top: 2px;
-}
+@media (max-width: 576px) {
 
-.maintwo{
-    border: 1px solid red;
+    
+  #grid {
+    width: 100%;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+  }
+
+  .mainone {
+    /* border: 1px solid black; */
+    /* padding: 5px; */
+    margin: 0px;
+  }
+
+  .colum1 {
+    /* /* padding: 0%; */
+    /* margin: 0;  */
+  }
+
+  .chintu {
+    /* border: 1px solid blue; */
+    margin: 0px;
+    margin-bottom: 15px;
+  }
+
+  .chintu > div:nth-child(1) > p {
+    font-size: 12px;
+  }
+
+  #upevents {
+    /* border: 1px solid blue; */
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  #outoffice {
+    /* border: 1px solid blue; */
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  #outoffice > div > div:nth-child(1) {
+    font-size: 12px;
+    margin: 8px 0;
+  }
+
+  #outoffice > div > div:nth-child(2) > div > img {
+    width: 55px;
+    height: 55px;
+  }
+
+  #outoffice > div > div:nth-child(2) > div:nth-child(2) {
+    font-size: 14px;
+  }
+
+  #outoffice > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) {
+    font-size: 12px;
+  }
+
+  .calender {
+    margin: 0;
+    /* border: 1px solid blue; */
+    font-size: 14px;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .calender > div:nth-child(1) {
+    /* border: 1px solid blue; */
+    width: 100%;
+  }
+
+  .calender > div:nth-child(2) {
+    /* border: 1px solid green; */
+    width: 100%;
+  }
+
+  .maintwo {
+    padding: 0%;
+  }
+
+  .announce {
+    /* border: 1px solid blue; */
+    font-size: 14px;
+  }
+
+  .announce > div > div:nth-child(1) {
+    width: 25%;
+  }
+
+  .announce > div > div:nth-child(2) {
+    width: 73%;
+  }
+
+  #task {
+    /* border: 1px solid blue; */
+    font-size: 14px;
+  }
 }
