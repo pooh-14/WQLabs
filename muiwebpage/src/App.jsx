@@ -6,7 +6,7 @@ import CheckIn from './Components/CheckIn';
 
 function App() {
   return (
-    <div className="App">
+    <div >
       <Routes>
         <Route exact path='/' element={<Home/>}/>
         <Route exact path='/checkin' element={<CheckIn/>}/>
