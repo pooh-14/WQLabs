@@ -4,10 +4,6 @@ import {
   Avatar,
   Box,
   Button,
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
   Grid,
   InputAdornment,
   Paper,
@@ -20,7 +16,6 @@ import {
   TableRow,
   TextField,
   Typography,
-  colors,
 } from "@mui/material";
 import DrawerComp from "./DrawerComp";
 import { AuthContext } from "./Context/AuthContext";
@@ -29,6 +24,8 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import DomainVerificationIcon from "@mui/icons-material/DomainVerification";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import SearchIcon from "@mui/icons-material/Search";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const Home = () => {
   const { menu, setMenu } = useContext(AuthContext);
@@ -40,6 +37,7 @@ const Home = () => {
     display: "flex",
     padding: "15px",
     alignItems: "center",
+    fontFamily: "Poppins",
   };
 
   const icn = {
@@ -50,7 +48,7 @@ const Home = () => {
     marginRight: "15px",
   };
 
-  const secdiv={
+  const secdiv = {
     width: "97.4%",
     margin: "auto",
     borderRadius: "12px",
@@ -58,43 +56,44 @@ const Home = () => {
     marginTop: "22px",
     border: "1px solid #e4e4e5",
     padding: "15px",
-  }
+    fontFamily: "Poppins",
+  };
 
-  const bttn={
+  const bttn = {
     textTransform: "none",
     padding: "7px 9px",
     fontSize: "13px",
     fontWeight: "600",
-  }
+  };
 
-  const tblcntnt=[
+  const tblcntnt = [
     {
-      name:"Jose King",
-      company:"Initech",
-      phone:"8975894323",
-      date:"20th Nov 2023",
-      in:"12:11 PM",
-      out:"12:03 PM"
+      name: "Jose King",
+      company: "Initech",
+      phone: "8975894323",
+      date: "20th Nov 2023",
+      in: "12:11 PM",
+      out: "12:03 PM",
     },
 
     {
-      name:"Kevin Wilkinson",
-      company:"Globex Corporation ",
-      phone:"7856934434",
-      date:"20th Nov 2023",
-      in:"12:11 PM",
-      out:"11:55 AM"
+      name: "Kevin Wilkinson",
+      company: "Globex Corporation ",
+      phone: "7856934434",
+      date: "20th Nov 2023",
+      in: "12:11 PM",
+      out: "11:55 AM",
     },
 
     {
-      name:"Jon Doe",
-      company:"Werq Labs",
-      phone:"9867834423",
-      date:"20th Nov 2023",
-      in:"12:11 PM",
-      out:"05:18 PM"
+      name: "Jon Doe",
+      company: "Werq Labs",
+      phone: "9867834423",
+      date: "20th Nov 2023",
+      in: "12:11 PM",
+      out: "05:18 PM",
     },
-  ]
+  ];
 
   return (
     <Box sx={{ display: "flex", backgroundColor: "#f5f5f6" }}>
@@ -236,9 +235,21 @@ const Home = () => {
             <Box></Box>
           </Box>
           <Box sx={secdiv}>
-            <Box sx={{ display: "flex",}}>
-              <Typography sx={{fontSize:"18px", fontWeight:"700", alignSelf:"center"}}>Recent Visits</Typography>
-              <Stack sx={{ marginLeft: "auto", alignItems:"center" }} spacing={2} direction="row">
+            <Box sx={{ display: "flex" }}>
+              <Typography
+                sx={{
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  alignSelf: "center",
+                }}
+              >
+                Recent Visits
+              </Typography>
+              <Stack
+                sx={{ marginLeft: "auto", alignItems: "center" }}
+                spacing={2}
+                direction="row"
+              >
                 {/* <TextField variant="outlined" placeholder="Search..." sx={{'& .MuiInputBase-root':{height:'25px'}}} 
               InputProps={{ endAdornment: <endAdornment position="End"><SearchIcon/></endAdornment>}}/>   */}
 
@@ -258,39 +269,86 @@ const Home = () => {
                   }}
                   variant="outlined"
                 />
-                <Button
-                  variant="contained"
-                  sx={bttn}
-                >
+                <Button variant="contained" sx={bttn}>
                   Check In
                 </Button>
               </Stack>
             </Box>
-            <TableContainer sx={{border:"1px solid #e4e4e5", marginTop:"15px", borderRadius:"5px"}}>
+            <TableContainer
+              sx={{
+                border: "1px solid #e4e4e5",
+                marginTop: "15px",
+                borderRadius: "5px",
+              }}
+            >
               <Table>
-                <TableHead >
-                  <TableRow sx={{padding:"0"}}>
-                    <TableCell><strong>Name</strong></TableCell>
-                    <TableCell><strong>Company Name</strong></TableCell>
-                    <TableCell><strong>Phone</strong></TableCell>
-                    <TableCell><strong>Date</strong></TableCell>
-                    <TableCell><strong>Check In</strong></TableCell>
-                    <TableCell><strong>Check Out</strong></TableCell>
+                <TableHead>
+                  <TableRow>
+                    <TableCell>
+                      <strong>Name</strong>
+                    </TableCell>
+                    <TableCell>
+                      <strong>Company Name</strong>
+                    </TableCell>
+                    <TableCell>
+                      <strong>Phone</strong>
+                    </TableCell>
+                    <TableCell>
+                      <strong>Date</strong>
+                    </TableCell>
+                    <TableCell>
+                      <strong>Check In</strong>
+                    </TableCell>
+                    <TableCell>
+                      <strong>Check Out</strong>
+                    </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                 {tblcntnt?.map((content,index)=>(
-                  <TableRow sx={{padding:"-16px"}}>
-                    <TableCell sx={{display:"flex", alignItems:"center"}}><Avatar sx={{marginRight:"10px"}}  src="/broken-image.jpg"/>{content.name}</TableCell>
-                    <TableCell>{content.company}</TableCell>
-                    <TableCell>{content.phone}</TableCell>
-                    <TableCell>{content.date}</TableCell>
-                    <TableCell>{content.in}</TableCell>
-                    <TableCell>{content.out}</TableCell>
-                  </TableRow>
-                 ))}
+                  {tblcntnt?.map((content, index) => (
+                    <TableRow sx={{ padding: "-16px" }}>
+                      <TableCell
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          padding: "6px",
+                        }}
+                      >
+                        <Avatar
+                          sx={{ marginRight: "10px" }}
+                          src="/broken-image.jpg"
+                        />
+                        {content.name}
+                      </TableCell>
+                      <TableCell sx={{ padding: "6px" }}>
+                        {content.company}
+                      </TableCell>
+                      <TableCell sx={{ padding: "6px" }}>
+                        {content.phone}
+                      </TableCell>
+                      <TableCell sx={{ padding: "6px" }}>
+                        {content.date}
+                      </TableCell>
+                      <TableCell sx={{ padding: "6px" }}>
+                        {content.in}
+                      </TableCell>
+                      <TableCell sx={{ padding: "6px" }}>
+                        {content.out}
+                      </TableCell>
+                    </TableRow>
+                  ))}
                 </TableBody>
               </Table>
+              <Box sx={{ display: "flex", justifyContent: "space-between", paddingX:"20px", marginTop:"22px" }}>
+                <Typography fontSize={14}>
+                  Showing <b>1</b> to <b>3</b> out of <b>3</b> People{" "}
+                </Typography>
+                <Box sx={{ display: "flex" ,border:"1px solid red"}}>
+                  <ChevronLeftIcon sx={{border:"1px solid blue"}}/>
+                  <p  style={{border:"1px solid blue"}}>1</p>
+                  <ChevronRightIcon  sx={{border:"1px solid blue"}}/>
+                </Box>
+              </Box>
             </TableContainer>
           </Box>
         </Box>

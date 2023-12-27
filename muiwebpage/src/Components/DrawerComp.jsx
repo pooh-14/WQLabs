@@ -18,6 +18,7 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import LogoutIcon from "@mui/icons-material/Logout";
 import logo from "../Images/Logo.png";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const DrawerComp = () => {
   const { toggle, menu } = useContext(AuthContext);
@@ -81,7 +82,7 @@ const DrawerComp = () => {
         <Box>
           <Drawer variant="permanent" sx={{ height: "100vh" }}>
             <Box style={bgclr} sx={{ overflow: "hidden" }}>
-              <Box sx={{ display: "flex", padding: "12px 0px 0px 5px" }}>
+              <Box sx={{ display: "flex", padding: "12px 15px 0px 5px", alignItems:"center" }}>
                 <img src={logo} />
                 <Typography
                   variant="h4"
@@ -91,10 +92,12 @@ const DrawerComp = () => {
                     marginLeft: "17px",
                     marginTop: "10px",
                     fontFamily: "Poppins",
+                    marginRight:"50px"
                   }}
                 >
                   Logo
                 </Typography>
+                <ChevronLeftIcon sx={{marginTop:"10px"}} onClick={toggle}/>
               </Box>
               <List sx={{ width: "245px", marginTop: "12%" }}>
                 {menuKaFirstList?.map((menuone, index) => (
