@@ -14,12 +14,11 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import { AuthContext } from "../../../muiwebpage/src/Components/Context/AuthContext";
 
 const Navbar = () => {
-
   const { toggle } = useContext(AuthContext);
 
   return (
     <>
-      <AppBar sx={{ height: 72,justifyContent: "center"}} color="inherit" position="sticky">
+      <AppBar sx={{ height: 72,justifyContent: "center",borderBottom:"1px solid #e4e4e5"}} color="inherit" position="sticky" elevation={0}>
         <Toolbar>
           <MenuIcon fontSize="large" color="action" onClick={toggle}/>
           <Stack sx={{ marginLeft: "auto" }} spacing={1} direction="row">
