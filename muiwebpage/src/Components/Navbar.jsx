@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar sx={{ height: 72,justifyContent: "center",borderBottom:"1px solid #e4e4e5"}} color="inherit" position="sticky" elevation={0}>
+      <AppBar sx={{ height: 72,justifyContent: "center",borderBottom:"1px solid #e4e4e5", zIndex:'1'}} color="inherit" position="sticky" elevation={0}>
         <Toolbar>
           {!menu?
           

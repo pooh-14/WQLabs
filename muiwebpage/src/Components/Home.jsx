@@ -5,6 +5,7 @@ import {
   Box,
   Button,
   Grid,
+  IconButton,
   InputAdornment,
   Paper,
   Stack,
@@ -26,6 +27,7 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import SearchIcon from "@mui/icons-material/Search";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import OpenInBrowserIcon from "@mui/icons-material/OpenInBrowser";
 
 const Home = () => {
   const { menu, setMenu } = useContext(AuthContext);
@@ -49,7 +51,7 @@ const Home = () => {
   };
 
   const secdiv = {
-    width: "97.4%",
+    width: "97.2%",
     margin: "auto",
     borderRadius: "12px",
     backgroundColor: "white",
@@ -64,6 +66,63 @@ const Home = () => {
     padding: "7px 9px",
     fontSize: "13px",
     fontWeight: "600",
+    display: { xs: "none", sm: "block", md: "block" },
+  };
+
+  const bttntwo = {
+    border: "1px solid #1976d2",
+    backgroundColor: "#1976d2",
+    color: "white",
+    width: "40px",
+    padding: "6px 0px",
+    fontSize: "13px",
+    fontWeight: "600",
+    display: { xs: "block", sm  : "none" , md: "none" },
+  };
+
+  const chevron = {
+    border: "1px solid #b6c3ef",
+    width: "21px",
+    height: "21px",
+    borderRadius: "3px",
+    backgroundColor: "#b6c3ef",
+    color: "white",
+  };
+
+  const one = {
+    border: "1px solid #ebebeb",
+    margin: "auto",
+    width: "25px",
+    height: "24px",
+    borderRadius: "5px",
+    fontSize: "15px",
+    backgroundColor: "#ebebeb",
+  };
+
+  const page = {
+    display: "flex",
+    justifyContent: "space-between",
+    // border: "1px solid red",
+    width: "77px",
+    alignItems: "center",
+    textAlign: "center",
+  };
+
+  const show = {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: " 0 27px 0 20px",
+    margin: "22px 0",
+  };
+
+  const celltwo = {
+    padding: "5px",
+    paddingLeft: "0px",
+    color: "#4E4F4F",
+    width: "187px",
+    padding: { xs: "0px 7px", sm: "30px 20px 30px 10px",md: "0px 0px",},
+    textWrap: "nowrap",
+    fontSize:{sm:"20px", md:"14px"},
   };
 
   const tblcntnt = [
@@ -87,7 +146,7 @@ const Home = () => {
 
     {
       name: "Jon Doe",
-      company: "Werq Labs",
+      company: "werq Labs",
       phone: "9867834423",
       date: "20th Nov 2023",
       in: "12:11 PM",
@@ -98,22 +157,22 @@ const Home = () => {
   return (
     <Box sx={{ display: "flex", backgroundColor: "#f5f5f6" }}>
       {menu ? (
-        <Box sx={{ width: "300px" }}>
+        <Box sx={{ width: { xs: "100%",sm:"100%", md: "300px" } }}>
           <DrawerComp menu={menu} setMenu={setMenu} />
         </Box>
       ) : (
-        <Box sx={{ width: "62px" }}>
+        <Box sx={{ width: "62px", display: { xs: "none",sm: "none", md: "block" } }}>
           <DrawerComp menu={menu} setMenu={setMenu} />
         </Box>
       )}
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: { xs: "100vw", sm:"100%", md: "100%" }, height: "100vh" }}>
         <Box>
           <Navbar menu={menu} setMenu={setMenu} />
         </Box>
         <Box>
-          <Box sx={{ width: "97.4%", margin: "auto" }}>
+          <Box sx={{ width: "97.2%", margin: "auto" }}>
             <Box sx={{ marginTop: "22px" }}>
-              <Grid container spacing={3}>
+              <Grid container spacing={{xs:1,sm:2,md:3}}>
                 <Grid item xs={12} sm={6} md={3}>
                   <Paper sx={ppr} elevation={0}>
                     <Box>
@@ -232,13 +291,12 @@ const Home = () => {
                 </Grid>
               </Grid>
             </Box>
-            <Box></Box>
           </Box>
           <Box sx={secdiv}>
             <Box sx={{ display: "flex" }}>
               <Typography
                 sx={{
-                  fontSize: "18px",
+                  fontSize: { xs: "15px", sm: "18px", md: "18px" },
                   fontWeight: "700",
                   alignSelf: "center",
                 }}
@@ -246,7 +304,7 @@ const Home = () => {
                 Recent Visits
               </Typography>
               <Stack
-                sx={{ marginLeft: "auto", alignItems: "center" }}
+                sx={{ alignItems: "center", marginLeft: "auto" }}
                 spacing={2}
                 direction="row"
               >
@@ -261,9 +319,9 @@ const Home = () => {
                         <SearchIcon />
                       </InputAdornment>
                     ),
-                    style: {
-                      width: "260px",
-                      height: "38px",
+                    sx: {
+                      width: { xs: "172px", sm: "300px", md: "260px" },
+                      height: { xs: "28px", sm: "38px", md: "38px" },
                       fontSize: "14px",
                     },
                   }}
@@ -272,6 +330,10 @@ const Home = () => {
                 <Button variant="contained" sx={bttn}>
                   Check In
                 </Button>
+
+                <IconButton variant="contained" sx={bttntwo}>
+                  <OpenInBrowserIcon />
+                </IconButton>
               </Stack>
             </Box>
             <TableContainer
@@ -284,22 +346,75 @@ const Home = () => {
               <Table>
                 <TableHead>
                   <TableRow>
-                    <TableCell>
+                    <TableCell
+                      align="left"
+                      sx={{
+                        paddingLeft: "10px",
+                        width: "187px",
+                        padding: { xs: "0px 7px", sm: "30px 20px 30px 10px",md: "0px 10px",},
+                        textWrap: "nowrap",
+                        fontSize:{sm:"20px", md:"14px"},
+                      }}
+                    >
                       <strong>Name</strong>
                     </TableCell>
-                    <TableCell>
+                    <TableCell
+                      align="left"
+                      sx={{
+                        paddingLeft: "0px",
+                        width: "187px",
+                        textWrap: "nowrap",
+                        fontSize:{sm:"20px", md:"14px"},
+                      }}
+                    >
                       <strong>Company Name</strong>
                     </TableCell>
-                    <TableCell>
+                    <TableCell
+                      align="left"
+                      sx={{
+                        paddingLeft: "0px",
+                        width: "187px",
+                        padding: { xs: "0px 7px", sm: "30px 20px 30px 10px",md: "0px 0px",},
+                        textWrap: "nowrap",
+                        fontSize:{sm:"20px", md:"14px"},
+                      }}
+                    >
                       <strong>Phone</strong>
                     </TableCell>
-                    <TableCell>
+                    <TableCell
+                      align="left"
+                      sx={{
+                        paddingLeft: "0px",
+                        width: "187px",
+                        padding: { xs: "0px 7px", sm: "30px 20px 30px 10px",md: "0px 0px",},
+                        textWrap: "nowrap",
+                        fontSize:{sm:"20px", md:"14px"},
+                      }}
+                    >
                       <strong>Date</strong>
                     </TableCell>
-                    <TableCell>
+                    <TableCell
+                      align="left"
+                      sx={{
+                        paddingLeft: "0px",
+                        width: "187px",
+                        padding: { xs: "0px 7px", sm: "30px 20px 30px 10px",md: "0px 0px",},
+                        textWrap: "nowrap",
+                        fontSize:{sm:"20px", md:"14px"},
+                      }}
+                    >
                       <strong>Check In</strong>
                     </TableCell>
-                    <TableCell>
+                    <TableCell
+                      align="left"
+                      sx={{
+                        paddingLeft: "0px",
+                        width: "187px",
+                        padding: { xs: "0px 7px", sm: "30px 20px 30px 10px",md: "0px 0px",},
+                        textWrap: "nowrap",
+                        fontSize:{sm:"20px", md:"14px"},
+                      }}
+                    >
                       <strong>Check Out</strong>
                     </TableCell>
                   </TableRow>
@@ -307,46 +422,56 @@ const Home = () => {
                 <TableBody>
                   {tblcntnt?.map((content, index) => (
                     <TableRow sx={{ padding: "-16px" }}>
-                      <TableCell
-                        sx={{
-                          display: "flex",
-                          alignItems: "center",
-                          padding: "6px",
-                        }}
-                      >
-                        <Avatar
-                          sx={{ marginRight: "10px" }}
-                          src="/broken-image.jpg"
-                        />
-                        {content.name}
+                      <TableCell align="left" sx={{ padding: "5px 0" }}>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            padding: "0px",
+                            width: "187px",
+                            padding: { xs: "0px 7px", sm: "2px 0px 0 10px",},
+                            textWrap: "nowrap",
+                            fontSize:{sm:"20px", md:"14px"},
+                            margin: "0",
+                            paddingLeft: "10px",
+                            color: "#4E4F4F",
+                            marginRight:{sm:"20px", md:"0"},
+                          }}
+                        >
+                          <Avatar
+                            sx={{ marginRight: "10px" }}
+                            src="/broken-image.jpg"
+                          />
+                          {content.name}
+                        </Box>
                       </TableCell>
-                      <TableCell sx={{ padding: "6px" }}>
+                      <TableCell align="left" sx={celltwo}>
                         {content.company}
                       </TableCell>
-                      <TableCell sx={{ padding: "6px" }}>
+                      <TableCell align="left" sx={celltwo}>
                         {content.phone}
                       </TableCell>
-                      <TableCell sx={{ padding: "6px" }}>
+                      <TableCell align="left" sx={celltwo}>
                         {content.date}
                       </TableCell>
-                      <TableCell sx={{ padding: "6px" }}>
+                      <TableCell align="left" sx={celltwo}>
                         {content.in}
                       </TableCell>
-                      <TableCell sx={{ padding: "6px" }}>
+                      <TableCell align="left" sx={celltwo}>
                         {content.out}
                       </TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
               </Table>
-              <Box sx={{ display: "flex", justifyContent: "space-between", paddingX:"20px", marginTop:"22px" }}>
+              <Box sx={show}>
                 <Typography fontSize={14}>
-                  Showing <b>1</b> to <b>3</b> out of <b>3</b> People{" "}
+                  Showing <b>1</b> to <b>3</b> out of <b>3</b> People
                 </Typography>
-                <Box sx={{ display: "flex" ,border:"1px solid red"}}>
-                  <ChevronLeftIcon sx={{border:"1px solid blue"}}/>
-                  <p  style={{border:"1px solid blue"}}>1</p>
-                  <ChevronRightIcon  sx={{border:"1px solid blue"}}/>
+                <Box sx={page}>
+                  <ChevronLeftIcon sx={chevron} />
+                  <p style={one}>1</p>
+                  <ChevronRightIcon sx={chevron} />
                 </Box>
               </Box>
             </TableContainer>
